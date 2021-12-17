@@ -19,19 +19,18 @@ let idN = 0;
 function criarTarefa() {
     const ul = document.querySelector('.ul')
     const li = document.createElement("li");
-    idN ++
+    idN++
     li.id = `li${(idN)}`;
     li.innerHTML = newTarefa.value;
     li.appendChild(criarButton())
     ul.appendChild(li);
-    
     newTarefa.value = ''
+    return li
 }
-
 
 function criarButton() {
     const button = document.createElement("button");
-    button.id =  `delete${(idN)}`;
+    button.id = `delete${(idN)}`;
     button.textContent = "Excluir";
     button.onclick = deletar;
     return button;
@@ -51,10 +50,8 @@ function aviso() {
 
 }
 
-
-
-
-
 function deletar() {
-   console.log('clicou');
+    var tarefa = document.querySelector('li');
+    return tarefa.parentNode.removeChild(tarefa);
+
 }
