@@ -14,7 +14,6 @@ addTarefa.addEventListener('click', function () {
 
 
 
-
 let idN = 0;
 function criarTarefa() {
     const ul = document.querySelector('.ul')
@@ -31,7 +30,8 @@ function criarTarefa() {
 function criarButton() {
     const button = document.createElement("button");
     button.id = `delete${(idN)}`;
-    button.textContent = "Excluir";
+    button.classList = 'delete'
+    button.textContent = "-";
     button.onclick = deletar;
     return button;
 }
@@ -55,3 +55,4 @@ function deletar() {
     return tarefa.parentNode.removeChild(tarefa);
 
 }
+

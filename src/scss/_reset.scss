@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
   outline: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -17,13 +17,10 @@ body {
   background: #fff;
   padding: 20px;
   border-radius: 10px;
- 
 }
-input, button {
-  border: none;
-
- 
-  
+input,
+button {
+  border: 1px solid lightgrey;
 }
 li {
   list-style: none;
@@ -32,21 +29,26 @@ li {
   align-items: center;
   justify-content: space-between;
   margin-top: 2px;
-  
 }
 ul {
   padding: 20px 0;
 }
- button {
+button {
   margin-left: 5px;
- }
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-input, li {
+input,
+li {
   width: 100%;
   height: 40px;
-
- 
+  padding: 10px;
+  font-size: 18px;
 }
+
 .aviso {
   color: red;
   font-size: 20px;
@@ -58,14 +60,17 @@ input, li {
 .add-tarefa {
   height: 40px;
   width: 40px;
-  
-  font-size: 20px;
-  
+
   background-color: white;
-  
 }
 .box-new-tarefa {
   display: flex;
   align-items: center;
-  
+}
+
+.delete {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: red;
 }
