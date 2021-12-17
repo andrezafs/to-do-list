@@ -15,21 +15,23 @@ addTarefa.addEventListener('click', function () {
 
 
 
-
+let idN = 0;
 function criarTarefa() {
     const ul = document.querySelector('.ul')
     const li = document.createElement("li");
-    li.classList = 'li'
+    idN ++
+    li.id = `li${(idN)}`;
     li.innerHTML = newTarefa.value;
     li.appendChild(criarButton())
     ul.appendChild(li);
+    
     newTarefa.value = ''
 }
 
 
 function criarButton() {
     const button = document.createElement("button");
-    button.id = "delete";
+    button.id =  `delete${(idN)}`;
     button.textContent = "Excluir";
     button.onclick = deletar;
     return button;
