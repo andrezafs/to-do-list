@@ -15,13 +15,55 @@ body {
   background: #fff;
   padding: 20px;
   border-radius: 10px;
-  background-color: lightcoral;
+ 
 }
+input, button {
+  border: none;
 
+ 
+  
+}
+li {
+  list-style: none;
+  background-color: lightcyan;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2px;
+  
+}
+ul {
+  padding: 20px 0;
+}
+ button {
+  margin-left: 5px;
+ }
+
+input, li {
+  width: 100%;
+  height: 40px;
+
+ 
+}
 .aviso {
   color: red;
   font-size: 20px;
 }
 #tarefa:focus {
   color: red;
+}
+
+.add-tarefa {
+  height: 40px;
+  width: 40px;
+  
+  font-size: 20px;
+  
+  background-color: white;
+  
+}
+.box-new-tarefa {
+  display: flex;
+  align-items: center;
+  
 }
