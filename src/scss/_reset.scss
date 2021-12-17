@@ -86,3 +86,6 @@ input[type=checkbox], .delete{
   border-radius: 50%;
 
 }
+input[type=checkbox]:checked ~ li{
+  background-color: blue;
+}
