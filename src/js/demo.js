@@ -21,8 +21,7 @@ function criarTarefa() {
     idN++
     li.id = `li${(idN)}`;
     li.innerHTML = newTarefa.value;
-    li.appendChild(criarButton())
-    li.appendChild(criarCheckBox())
+    li.appendChild(criarButonsTarefa())
     ul.appendChild(li);
     newTarefa.value = ''
     return li
@@ -63,3 +62,11 @@ function deletar() {
 
 }
 
+function criarButonsTarefa() {
+    const divBtnTarefas = document.createElement('div'); 
+    divBtnTarefas.classList = 'btn-tarefas'
+    divBtnTarefas.appendChild(criarButton())
+    divBtnTarefas.appendChild(criarCheckBox())
+
+    return divBtnTarefas;
+}
