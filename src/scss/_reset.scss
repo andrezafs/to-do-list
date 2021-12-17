@@ -4,3 +4,24 @@
   outline: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: lightblue;
+}
+
+.box-list {
+  max-width: 640px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: lightcoral;
+}
+
+.aviso {
+  color: red;
+  font-size: 20px;
+}
+#tarefa:focus {
+  color: red;
+}
