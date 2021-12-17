@@ -22,6 +22,7 @@ function criarTarefa() {
     li.id = `li${(idN)}`;
     li.innerHTML = newTarefa.value;
     li.appendChild(criarButton())
+    li.appendChild(criarCheckBox())
     ul.appendChild(li);
     newTarefa.value = ''
     return li
@@ -36,6 +37,12 @@ function criarButton() {
     return button;
 }
 
+function criarCheckBox() {
+    const checkBox = document.createElement("input");
+    checkBox.type = "checkbox"
+
+    return checkBox;
+}
 console.log(criarButton());
 
 
