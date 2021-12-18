@@ -21,7 +21,7 @@ function criarTarefa() {
     idN++
     li.id = `li${(idN)}`;
     li.innerHTML = newTarefa.value;
-    li.onclick = aparecer;
+   
     li.appendChild(criarButonsTarefa())
     ul.appendChild(li);
     newTarefa.value = ''
@@ -69,17 +69,3 @@ function criarButonsTarefa() {
 
     return divBtnTarefas;
 }
-
-
-if(localStorage.Tarefa) {
-    newTarefa.value = localStorage.Tarefa;
-}
-
-
-var salvarTarefa = function () {
-    var Tarefa = newTarefa.value;
-    localStorage.setItem('tarefa', Tarefa);
-  
-}
-
-document.onchange = salvarTarefa;
