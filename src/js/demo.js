@@ -26,13 +26,14 @@ function criarTarefa() {
     idN++
     li.id = `li${(idN)}`;
     li.innerHTML = newTarefa.value;
-  
+
     li.insertBefore(criarCheckBox(), li.firstChild);
+    li.appendChild(criarDelete());
     ul.appendChild(li);
     newTarefa.value = ''
     li.addEventListener("mouseover", function () {
-     alert('olá')
       
+
     })
     return li
 }
@@ -74,10 +75,17 @@ function deletar() {
 function aparecer() {
     const chk = document.querySelector("#check");
     const lis = document.querySelector('li');
-   
+
     if (chk.checked) {
         lis.classList.add('concluido');
-        
+
     } else lis.classList.remove('concluido');
-   
+
+}
+function criarDelete() {
+    const btndelete =document.createElement('button');
+    btndelete.onclick = deletar;
+    btndelete.className= 'delete';
+    btndelete.style.backgroundImage = "url('https://img.icons8.com/ios-glyphs/30/000000/delete-forever.png')";
+    return btndelete;
 }

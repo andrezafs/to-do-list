@@ -73,11 +73,7 @@ li {
  
 }
 
-.delete {
-  
-  background-color: red;
-  margin-right: 5px;
-}
+
 
 .btn-tarefas {
   display: flex;
@@ -86,11 +82,10 @@ li {
 }
 
 input[type=checkbox], .delete{
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
+  height: 30px;
+  width: 30px;
   margin-right: 5px;
-
+  background-color: transparent;
 
 }
 .concluido {
