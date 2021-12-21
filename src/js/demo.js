@@ -26,10 +26,14 @@ function criarTarefa() {
     idN++
     li.id = `li${(idN)}`;
     li.innerHTML = newTarefa.value;
-   
+  
     li.insertBefore(criarCheckBox(), li.firstChild);
     ul.appendChild(li);
     newTarefa.value = ''
+    li.addEventListener("mouseover", function () {
+     alert('olá')
+      
+    })
     return li
 }
 
@@ -70,8 +74,10 @@ function deletar() {
 function aparecer() {
     const chk = document.querySelector("#check");
     const lis = document.querySelector('li');
+   
     if (chk.checked) {
         lis.classList.add('concluido');
+        
     } else lis.classList.remove('concluido');
    
 }
