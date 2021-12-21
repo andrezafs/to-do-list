@@ -1,7 +1,9 @@
 
+
 const addTarefa = document.querySelector('.add-tarefa')
 let newTarefa = document.querySelector('#tarefa')
 const box = document.querySelector('.box-list');
+// const inputbox = document.querySelector('.box-new-tarefa')
 
 
 addTarefa.addEventListener('click', function () {
@@ -9,7 +11,10 @@ addTarefa.addEventListener('click', function () {
         aviso()
     }
     else criarTarefa();
+
+
 })
+
 
 
 
@@ -22,7 +27,7 @@ function criarTarefa() {
     li.id = `li${(idN)}`;
     li.innerHTML = newTarefa.value;
    
-    li.appendChild(criarButonsTarefa())
+    li.insertBefore(criarCheckBox(), li.firstChild);
     ul.appendChild(li);
     newTarefa.value = ''
     return li
@@ -40,8 +45,8 @@ function criarButton() {
 function criarCheckBox() {
     const checkBox = document.createElement("input");
     checkBox.type = "checkbox";
-    
-
+    checkBox.id = 'check';
+    checkBox.onclick = aparecer;
     return checkBox;
 }
 
@@ -59,13 +64,14 @@ function deletar() {
     var tarefa = document.querySelector('li');
     return tarefa.parentNode.removeChild(tarefa);
 
+
 }
 
-function criarButonsTarefa() {
-    const divBtnTarefas = document.createElement('div'); 
-    divBtnTarefas.classList = 'btn-tarefas'
-    divBtnTarefas.appendChild(criarButton())
-    divBtnTarefas.appendChild(criarCheckBox())
-
-    return divBtnTarefas;
+function aparecer() {
+    const chk = document.querySelector("#check");
+    const lis = document.querySelector('li');
+    if (chk.checked) {
+        lis.classList.add('concluido');
+    } else lis.classList.remove('concluido');
+   
 }
