@@ -19,8 +19,8 @@ body {
   padding: 20px;
   border-radius: 10px;
 }
-input,
-button {
+
+button, .box-search, input{
   border: 1px solid lightgrey;
 }
 li {
@@ -34,14 +34,31 @@ ul {
   padding: 20px 0;
 }
 button {
+  border-radius: 50%;
   margin-left: 5px;
   font-size: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.box-search {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  border-radius: 1;
+  width: 50%;
 
-#tarefa, #search {
+  input {
+    width: 100%;
+    border: none;
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+}
+
+
+#tarefa, #search{
   width: 100%;
   height: 40px;
   padding: 10px;
