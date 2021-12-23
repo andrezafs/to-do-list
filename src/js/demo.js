@@ -3,6 +3,7 @@
 const addTarefa = document.querySelector('.add-tarefa')
 let newTarefa = document.querySelector('#tarefa')
 const box = document.querySelector('.box-list');
+var input = document.getElementById('search');
 // const inputbox = document.querySelector('.box-new-tarefa')
 
 
@@ -15,6 +16,7 @@ addTarefa.addEventListener('click', function () {
 
 })
 
+input.addEventListener('keyup', pesquisar);
 
 
 
@@ -33,7 +35,7 @@ function criarTarefa() {
     newTarefa.value = ''
     li.addEventListener("mouseover", function () {
       
-
+criarDelete().style.backgroundColor= 'red'
     })
     return li
 }
@@ -88,4 +90,21 @@ function criarDelete() {
     btndelete.className= 'delete';
     btndelete.style.backgroundImage = "url('https://img.icons8.com/ios-glyphs/30/000000/delete-forever.png')";
     return btndelete;
+}  
+
+task = document.getElementsByClassName('ul');
+searchV = document.getElementById( 'search');
+
+function pesquisar() {
+  filtrar = searchV.value;
+    for(i = 0; i <task.length; i++){
+        h5 = task[i].getElementsByTagName('li')[0];
+    
+        //Se combinarem
+        if (h5.innerHTML.indexOf(filtrar) > -1) {
+          task[i].style.display = "";
+        } else {
+         task[i].style.display = "none";
+        }
+      } 
 }
