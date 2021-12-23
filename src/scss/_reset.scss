@@ -46,7 +46,7 @@ button {
   align-items: center;
   margin: auto;
   border-radius: 1;
-  width: 50%;
+ 
 
   input {
     width: 100%;
@@ -113,4 +113,10 @@ input[type=checkbox], .delete{
 }
 .concluido {
   background-color: green;
+}
+
+@media screen and (max-width:435px){
+  .box {
+    padding: 0 20px;
+  }
 }
