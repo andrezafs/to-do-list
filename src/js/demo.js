@@ -28,6 +28,7 @@ function criarTarefa() {
     idN++
     li.id = `li${(idN)}`;
     li.innerHTML = newTarefa.value;
+
     li.appendChild(criarButton());
     ul.appendChild(li);
     newTarefa.value = ''
