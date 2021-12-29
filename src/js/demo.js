@@ -28,15 +28,10 @@ function criarTarefa() {
     idN++
     li.id = `li${(idN)}`;
     li.innerHTML = newTarefa.value;
-
-    li.insertBefore(criarCheckBox(), li.firstChild);
-    li.appendChild(criarDelete());
+    li.appendChild(criarButton());
     ul.appendChild(li);
     newTarefa.value = ''
-    li.addEventListener("mouseover", function () {
-      
-criarDelete().style.backgroundColor= 'red'
-    })
+
     return li
 }
 
